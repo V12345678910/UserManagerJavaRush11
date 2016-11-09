@@ -1,0 +1,50 @@
+DROP DATABASE IF EXISTS test; 
+
+CREATE DATABASE test; 
+
+USE test; 
+
+CREATE TABLE `test` 
+( 
+`id` INT(8) NOT NULL AUTO_INCREMENT, 
+`age` INT NOT NULL DEFAULT '0', 
+`isAdmin` BIT(1) NOT NULL DEFAULT b'0',
+`name` VARCHAR(25) NOT NULL DEFAULT '0', 
+`createdDate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+PRIMARY KEY (`id`) 
+) 
+COLLATE='utf8_general_ci';
+
+
+
+INSERT INTO `test` (`id`,`age`,`isAdmin`,`name`,`createdDate`) VALUES 
+(1,31,1,'Petrovskii','2015-10-11 16:50:27'),
+(2,31,1,'Petrov','2015-10-11 16:50:27'),
+(3,44,1,'Ivanov','2016-07-10 01:52:28'),
+(4,36,0,'Skvorcov','2015-12-01 19:14:05'),
+(5,44,1,'Ivancov','2017-02-13 15:07:40'),
+(6,48,0,'Hramcov','2016-09-05 23:56:05'),
+(7,31,1,'Spiridonov','2016-07-11 05:26:53'),
+(8,21,1,'Smirnov','2016-09-06 11:11:50'),
+(9,40,0,'Sokolov','2015-11-04 09:42:46'),
+(10,55,0,'Petrovcev','2016-03-26 17:11:09'),
+(11,34,0,'Hismatov','2015-06-06 13:26:41'),
+(12,25,1,'romanov','2017-04-29 11:16:09'),
+(13,34,0,'Valeriev','2015-06-15 00:17:54'),
+(14,53,1,'Vasiliev','2016-04-29 08:49:40'),
+(15,28,1,'Kotov','2016-01-26 08:46:29'),
+(16,32,0,'Sadko','2017-03-20 04:22:25'),
+(17,39,1,'Mutko','2015-08-20 03:02:51'),
+(18,36,1,'Sadovnichev','2017-01-15 02:38:19'),
+(19,27,0,'Surovcev','2015-09-03 11:48:41'),
+(20,25,0,'Krasnov','2016-05-12 05:59:08'),
+(21,43,1,'Tihonov','2017-02-05 00:12:16'),
+(22,29,1,'Sinelnikov','2016-03-13 05:43:29'),
+(23,25,1,'Zelenov','2016-02-04 00:21:18'),
+(24,32,0,'Matreshkin','2017-03-13 12:17:53'),
+(25,29,1,'Mohovoi','2015-09-03 10:46:11'),
+(26,43,0,'Puhovoi','2016-10-19 14:00:45'),
+(27,52,0,'Zverinyi','2016-08-19 21:50:12'),
+(28,23,1,'Samcov','2017-03-21 02:48:18'),
+(29,32,1,'Grebcov','2017-02-16 00:35:50'),
+(30,46,0,'Symonov','2016-10-10 13:06:36');
